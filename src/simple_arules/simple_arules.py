@@ -61,7 +61,7 @@ def _get_association_rules(support_dictionaries):
     return association_rules
 
 
-def frequent(transactions, max_length=None, min_support=1, single_tuples=False):
+def frequent(transactions, max_length=2, min_support=1, single_tuples=False):
     support_dictionaries = _get_support_dictionaries(
         transactions, max_length, min_support
     )
