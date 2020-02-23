@@ -50,4 +50,4 @@ def test_all_sub_combinations():
 
 
 def test_get_association_rules():
-    ar._get_association_rules(support_dictionaries_expected)[:7]
+    ar._get_association_rules(support_dictionaries_expected)[:7]==association_rules_expected_7
