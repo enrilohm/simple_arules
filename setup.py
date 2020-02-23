@@ -5,13 +5,17 @@ https://packaging.python.org/guides/distributing-packages-using-setuptools/
 https://github.com/pypa/sampleproject
 """
 
+
 # Always prefer setuptools over distutils
 from setuptools import setup, find_packages
 from os import path
 
 here = path.abspath(path.dirname(__file__))
 name = path.basename(here)
-print(name)
+
+with open(path.join(here, "requirements.txt"),"r") as f:
+    requirements=f.read().splitlines()
+
 # Get the long description from the README file
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
@@ -100,7 +104,7 @@ setup(
     # For an analysis of "install_requires" vs pip's requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
 
-    install_requires=['peppercorn', 'pandas', 'scipy', 'tqdm'],  # Optional
+    install_requires=requirements,  # Optional
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). Users will be able to install these using the "extras"

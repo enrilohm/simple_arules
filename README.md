@@ -12,6 +12,6 @@ from simple_arules import frequent, apriori
 transactions = [["eggs", "bacon", "soup"],
                 ["eggs", "bacon", "apple"],
                 ["soup", "bacon", "banana"]]
-ar.frequent(transactions, max_length=3, min_support=1)
-ar.apriori(transactions, max_length=3, min_support=1, min_confidence=0.1)
+frequent(transactions, max_length=3, min_support=1)
+apriori(transactions, max_length=3, min_support=1, min_confidence=0.1)
 ```
